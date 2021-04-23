@@ -3,7 +3,7 @@ How to create a connection between MySQL Database and Unity!
 
 ATTENTION!
 This code isn't working yet.
-If you know how to make it works, I'll really appreciate your help!
+If you know how to make it works, I'd really appreciate your help!
 
 # Step-by-Step
 1. Open your Unity project;
