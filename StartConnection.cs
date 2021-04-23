@@ -49,11 +49,11 @@ public class OpenConnection : MonoBehaviour
         while (data.Read())
         {
             // While there is data to show, print it!
-            Debug.Log("Data: " + "YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + "\n"); // Mostramos estes dados
+            Debug.Log("Data: " + "YOUR_FIELD: " + data["YOUR_FIELD"] + ". YOUR_FIELD: " + data["YOUR_FIELD"] + ". YOUR_FIELD: " + data["YOUR_FIELD"] + ". YOUR_FIELD: " + data["YOUR_FIELD"] + "\n"); // Mostramos estes dados
         }
 
         // Closing the reading command
-        dados.Close();
+        data.Close();
         cmd.Dispose();
     }
 
