@@ -1,7 +1,7 @@
 # MySQLforUnity
 How to create a connection between MySQL Database and Unity!
 
-#Step-by-Step
+# Step-by-Step
 1. Open your Unity project;
 2. Create a new C# script;
 3. Paste the code named "StartConnectioncs" at main branch;
