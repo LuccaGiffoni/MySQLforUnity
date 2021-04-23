@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class OpenConnection : MonoBehaviour
 {
-    public string Host = "unity-azure.mysql.database.azure.com";
-    public string Pass = "Java2002.";
-    public string User = "lucca@unity-azure";
-    public string DataBaseName = "usuarios";
-    public string LoginTableName = "goit";
+    public string Host = "YOUR_SERVER.mysql.database.azure.com";
+    public string Pass = "YOUR_PASSWORD";
+    public string User = "YOUR_USER";
+    public string DataBaseName = "YOUR_DATABASE_NAME";
+    public string LoginTableName = "YOUR_TABLE_NAME";
     private MySqlConnection connection;
     private string source;
 
     void Start()
     {
-        // Server=unity-azure.mysql.database.azure.com; Port=3306; Database={your_database}; Uid=lucca@unity-azure; Pwd={your_password}; SslMode=Preferred;
+        // You can find your connection string with your server provider
+        // IMPORTANT: The port is variable, so check in wich port your server is
         // Creating the connection string
         source = "Server=" + Host + "; Port=3306; Database=" + DataBaseName + ";Uid=" + User + "; Pwd=" + Pass;
 
@@ -43,12 +44,12 @@ public class OpenConnection : MonoBehaviour
         cmd.CommandText = "SELECT * FROM " + LoginTableName;
 
         // Executing the commmand
-        MySqlDataReader dados = cmd.ExecuteReader();
+        MySqlDataReader data = cmd.ExecuteReader();
 
-        while (dados.Read())
+        while (data.Read())
         {
             // While there is data to show, print it!
-            Debug.Log("Dados: " + "Código do Cliente: " + dados["cod_cli"] + ". Nome: " + dados["nome"] + ". Profissão: " + dados["profissao"] + ". CEP: " + dados["cep"] + "\n"); // Mostramos estes dados
+            Debug.Log("Data: " + "YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + ". YOUR_FIELD: " + dados["YOUR_FIELD"] + "\n"); // Mostramos estes dados
         }
 
         // Closing the reading command
